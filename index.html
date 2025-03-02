@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Type in commands to find out more about me. A good start is always 'help'. If a command fails, check back in a few days">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" /> -->
+    <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" /> -->
+    <!-- <meta name="apple-mobile-web-app-title" content="" /> -->
+    <!-- <link rel="manifest" href="site.webmanifest" /> -->
+    <title>My interactive CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="light-mode">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+
+    <p>Last login: Wed Nov 27 23:59:59 on ttys000</p>
+    <p>Type in commands to find out more about me</p>
+<p>
+    <strong class="text-blue">username</strong>
+    <strong class="text-green">/Users/user</strong>:~$ Just type in something
+</p>
+
+
+    <div id="terminal"></div>
+    <div class="input-line">
+        <span class="prompt">~$&nbsp;</span>
+        <span class="input-area">
+            <span></span>
+            <span id="cursor" class="blink">█</span>
+            <input type="text" id="command-input" class="input" name="no-autocomplete" autocomplete="new-password" autofocus>
+        </span>
+    </div>
+
+    <script src="command.js"></script>
+    <script src="themeswitcher.js"></script>
+</body>
+
+</html>
+

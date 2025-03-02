@@ -1,0 +1,134 @@
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #0f0;
+}
+
+.theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+#terminal {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.input-area {
+    display: inline-block;
+    flex: 1;
+}
+
+.input {
+    display: inline;
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    caret-color: transparent; /* Hide Standard Cursor */
+}
+
+.blink {
+    animation: blink 1s infinite;
+    color: #558b2f;
+}
+
+.text-blue {
+    color: #1565c0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-green {
+    color: #558b2f;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body.light-mode a:visited {
+    color: black;
+}
+
+body.dark-mode a:visited {
+    color: white;
+}
+
+body.light-mode a {
+    color: black;
+}
+
+body.dark-mode a {
+    color: white;
+}
